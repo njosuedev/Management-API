@@ -18,27 +18,9 @@ app.use(express.static('public'));
 app.engine('hbs', engine({ extname: '.hbs' })); // 'engine' method used in version 8.x
 app.set('view engine', 'hbs');
 
-
-// connection pool
-
-const pool = mysql.createPool({
-    connectionLimit : 100,
-    host            : process.env.DB_HOST,
-    user            : process.env.DB_USER,
-    password        : process.env.DB_PASS,
-    database        : process.env.DB_NAME
-})
-
-// connect to DB
-
-pool.getConnection((err,connection) => {
-    if(err) throw err;
-    console.log('connected as ID' + connection.threadId);
-})
-
-app.get('',(req,res) => {
-    res.render('home');
-})
+// routes
+const routes = require('./server/routes/user');
+app.use('/',routes);
 
 // Server start
 app.listen(port, () => console.log(`App is listening on port ${port}`));
