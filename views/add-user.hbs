@@ -9,8 +9,8 @@
 
 {{#if alert}}
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-  {{alert}}
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    {{alert}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 {{/if}}
 
@@ -35,13 +35,14 @@
     </div>
     <div class="col-6">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder= "Phone" name="phone">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Phone" name="phone">
             <label for="floatingInput">Phone</label>
         </div>
     </div>
     <div class="col-12">
         <div class="form-floating mb-3">
-            <textarea class="form-control" id="comment" placeholder= "Leave a comment" name="comment" style="height: 200px; resize: none;">{{this.comments}}</textarea>
+            <textarea class="form-control" id="comment" placeholder="Leave a comment" name="comment"
+                style="height: 200px; resize: none;">{{this.comments}}</textarea>
             <label for="floatingInput">Comments</label>
         </div>
     </div>
