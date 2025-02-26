@@ -1,0 +1,1 @@
+CREATE TABLE `user-management`.`users` (`id` INT(255) NOT NULL , `first_name` VARCHAR(45) NOT NULL , `last_name` VARCHAR(45) NOT NULL , `email` VARCHAR(45) NOT NULL , `phone` VARCHAR(45) NOT NULL , `comment` TEXT NOT NULL , `status` VARCHAR(10) NOT NULL DEFAULT 'active' , `created_at` VARCHAR(255) NOT NULL DEFAULT CURRENT_TIMESTAMP ) ENGINE = InnoDB;
