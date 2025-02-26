@@ -22,9 +22,11 @@
   "homepage": "https://github.com/njosuedev/user-management#readme",
   "dependencies": {
     "body-parser": "^1.20.3",
+    "bootstrap-icons": "^1.11.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-handlebars": "^8.0.1",
+    "handlebars": "^4.7.8",
     "mysql": "^2.18.1"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 const express = require('express');
-const exphbs = require('express-handlebars');
+const { engine } = require('express-handlebars'); // Use destructuring to import 'engine'
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 require('dotenv').config();
@@ -15,8 +15,12 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // Template engine
-app.engine('hbs', exphbs({ extname: '.hbs' }));
+app.engine('hbs', engine({ extname: '.hbs' })); // 'engine' method used in version 8.x
 app.set('view engine', 'hbs');
+
+app.get('',(req,res) => {
+    res.render('home');
+})
 
 // Server start
 app.listen(port, () => console.log(`App is listening on port ${port}`));
